@@ -1,0 +1,48 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+p{
+    font-size: 18px;
+}
+.blog-container{
+    /* width: 800px; */
+    position: relative;
+}
+.blog-container img{
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.user-time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 10px; */
+}
+.user{
+    display: flex;
+    gap: 20px;
+}
+.user-name h3{
+    margin: 0%;
+}
+.user-name{
+    margin: 0%;
+}
+.read-time{
+    position: absolute;
+    right: 0;
+}
+.blog-heading h2{
+    font-size: 20px;
+}
+.blog-tags{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.mark-read a{
+   text-decoration: underline;
+   color: blue;
+   font-weight: 500;
+}
