@@ -1,5 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 import './Blog.css'
 
 const Blog = () => {
@@ -18,6 +20,9 @@ const Blog = () => {
                 </div>
                 <div className="read-time">
                     <p>05 min read</p>
+                    <a href="" className='bookMark'>
+                    <FontAwesomeIcon icon={faBookmark} />
+                    </a>
                 </div>
             </div>
             <div className="blog-heading">
