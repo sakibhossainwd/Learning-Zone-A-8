@@ -1,16 +1,30 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Blogpage.css'
 import Blog from '../Blog/Blog';
 import BookMark from '../BookMark/BookMark';
 
 
 const BlogPage = () => {
+    const [blogs, setBlogs] = useState([]);
+
+    useEffect ( () => {
+        fetch('../../../fakeData/blogs.json')
+        .then(res => res.json())
+        .then(data => setBlogs(data))
+    })
+    // console.log(blogs)
     return (
         <div className='blog-page'>
+            <div className="blogs-container">
+                {
+                    blogs.map(blog => <Blog
+                    key={blog.id}
+                    blog={blog}
+                    ></Blog>  )
+                }
+            </div>
             
-                <Blog></Blog>
-                
             <BookMark></BookMark>
         </div>
     );

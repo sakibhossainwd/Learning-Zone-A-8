@@ -8,6 +8,7 @@ p{
 .blog-container{
     /* width: 800px; */
     position: relative;
+    margin-top: 70px;
 }
 .blog-container img{
     width: 100%;

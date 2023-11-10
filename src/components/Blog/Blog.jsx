@@ -4,10 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 import './Blog.css'
 
-const Blog = () => {
+const Blog = (props) => {
+    // console.log(props.blog.cover)
+    const {cover, BlogName, userImg, userName, publishDate, readTime, hashTag} = props.blog;
+ 
     return (
         <div className='blog-container'>
-            <img src="../../../images/1.jpg" alt="" />
+            <img src={cover} alt="" />
             <div className="user-time">
                 <div className="user">
                     <div className="user-img">
@@ -32,7 +35,7 @@ const Blog = () => {
                 <p>#beginners #programming </p>
             </div>
             <div className="mark-read">
-                <a href="#">Mark as read</a>
+                <a href="#" >Mark as read</a>
             </div>
         </div>
     );

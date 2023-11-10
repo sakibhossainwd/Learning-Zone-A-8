@@ -1,0 +1,39 @@
+[
+    {
+        "id": "1",
+        "BlogName": "Props vs state",
+        "userImg": "../images/boy1.png",
+        "userName": "Mr.Raju",
+        "publishDate": "Mar 14 (4 Day ago)",
+        "readTime": 5,
+        "hashTag": "#beginners #programming"
+    },
+    {
+        "id": "2",
+        "BlogName": "How does useState work?",
+        "userImg": "../images/boy2.png",
+        "userName": "Mr.Mohol",
+        "publishDate": "Jan 22 (9 Day ago)",
+        "readTime": 10,
+        "hashTag": "#beginners #programming"
+    },
+    {
+        "id": "3",
+        "BlogName": "Purpose of useEffect other than fetching data",
+        "userImg": "../images/boy1.png",
+        "userName": "Mr.Sakib",
+        "publishDate": "Dec 17 (2 Day ago)",
+        "readTime": 15,
+        "hashTag": "#beginners #programming"
+    },
+    {
+        "id": "4",
+        "BlogName": "How Does React work?",
+        "userImg": "../images/boy2.png",
+        "userName": "Mr.Rakib",
+        "publishDate": "Apr 30 ( ToDay )",
+        "readTime": 20,
+        "hashTag": "#beginners #programming"
+    }
+    
+]
