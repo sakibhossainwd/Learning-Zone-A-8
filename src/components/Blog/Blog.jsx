@@ -6,7 +6,10 @@ import './Blog.css'
 
 const Blog = (props) => {
     // console.log(props.blog.cover)
-    const {cover, BlogName, userImg, userName, publishDate, readTime, hashTag} = props.blog;
+    const blog = props.blog
+    const {id, cover, BlogName, userImg, userName, publishDate, readTime, hashTag} = props.blog;
+    
+    
  
     return (
         <div className='blog-container'>
@@ -35,7 +38,7 @@ const Blog = (props) => {
                 <p>{hashTag}</p>
             </div>
             <div className="mark-read">
-                <a href="#" >Mark as read</a>
+                <a href="#">Mark as read</a>
             </div>
         </div>
     );

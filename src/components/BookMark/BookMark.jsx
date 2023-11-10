@@ -3,8 +3,12 @@ import React from 'react';
 import './BookMark.css'
 
 const BookMark = () => {
+    
+    
+    
+
     return (
-        <div className='container'>
+        <div className='side-container'>
             <div className="spent-time">
                 <h3>Spent time on read : 177 min</h3>
             </div>
