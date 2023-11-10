@@ -14,25 +14,25 @@ const Blog = (props) => {
             <div className="user-time">
                 <div className="user">
                     <div className="user-img">
-                        <img src="../../../images/boy1.png" alt="" />
+                        <img src={userImg} alt="" />
                     </div>
                     <div className="user-name">
-                        <h3>Mr.Raju</h3>
-                        <p>Mar 14 - 4 Day ago</p>
+                        <h3>{userName}</h3>
+                        <p>{publishDate}</p>
                     </div>
                 </div>
                 <div className="read-time">
-                    <p>05 min read</p>
+                    <p>{readTime} min read</p>
                     <a href="" className='bookMark'>
                     <FontAwesomeIcon icon={faBookmark} />
                     </a>
                 </div>
             </div>
             <div className="blog-heading">
-                <h2>How to get your first job as a self-taught programmer</h2>
+                <h2>{BlogName}</h2>
             </div>
             <div className="blog-tags">
-                <p>#beginners #programming </p>
+                <p>{hashTag}</p>
             </div>
             <div className="mark-read">
                 <a href="#" >Mark as read</a>
