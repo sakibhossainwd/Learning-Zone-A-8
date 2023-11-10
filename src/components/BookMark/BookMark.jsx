@@ -2,9 +2,8 @@
 import React from 'react';
 import './BookMark.css'
 
-const BookMark = () => {
-    
-    
+const BookMark = (props) => {
+    // console.log(props)
     
 
     return (
@@ -13,7 +12,7 @@ const BookMark = () => {
                 <h3>Spent time on read : 177 min</h3>
             </div>
             <div className="bookMark-container">
-                <h3>Bookmarked Blogs : 8</h3>
+                <h3>Bookmarked Blogs : {props.length}</h3>
                 <div className="bookMark">
                     <h5>Master Microsoft Power Platform and Become an In-Demand!</h5>
                 </div>
