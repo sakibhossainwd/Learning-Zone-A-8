@@ -4,15 +4,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 import './Blog.css'
 
-const Blog = ({blog, }) => {
+const Blog = ({blog, readTimes, setreadTimes, bookedBlogs, setBookedBlogs}) => {
     // console.log(props.blog.cover)
     // const blog = props.blog
     const {id, cover, BlogName, userImg, userName, publishDate, readTime, hashTag} = blog;
     
-    const markReadTime = () => {
-        console.log('mark as read clicked')
+    const markReadTime = (readTime) => {
+        const totalRealTime = [...readTimes, readTime];
+        setreadTimes(totalRealTime)
     }
- 
+    
+    const addbookMark = (bookMark) => {
+        const totalBookMark = [...bookedBlogs, bookMark];
+        setBookedBlogs(totalBookMark)
+    }
+
+
     return (
         <div className='blog-container'>
             <img src={cover} alt="" />
@@ -28,7 +35,7 @@ const Blog = ({blog, }) => {
                 </div>
                 <div className="read-time">
                     <p>{readTime} min read</p>
-                    <a href="" className='bookMark'>< FontAwesomeIcon icon={faBookmark} />
+                    <a href="#" className='bookMark' onClick={ () => addbookMark(blog)}>< FontAwesomeIcon icon={faBookmark} />
                     </a>
                 </div>
             </div>
