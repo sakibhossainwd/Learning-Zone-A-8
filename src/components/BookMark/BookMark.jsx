@@ -4,9 +4,9 @@ import './BookMark.css'
 import BookedBookMark from '../BookedBookMark/BookedBookMark';
 
 
-const BookMark = ({readTimes, bookedBlogs}) => {
+const BookMark = ({readTimes, bookedBlogs, setBookedBlogs}) => {
     // console.log(readTimes)
-    console.log(bookedBlogs)
+    // console.log(bookedBlogs)
     const totalRealTime = readTimes.reduce((total, curr) => total + curr.readTime, 0)
     
     return (
@@ -17,7 +17,7 @@ const BookMark = ({readTimes, bookedBlogs}) => {
             <div className="bookMark-container">
                 <h3>Bookmarked Blogs : {bookedBlogs.length}</h3>
             {
-                bookedBlogs.map( bookedItem => <BookedBookMark key={bookedItem.id} bookedItem={bookedItem}></BookedBookMark>)
+                bookedBlogs.map( bookedItem => <BookedBookMark key={bookedItem.id} bookedItem={bookedItem} bookedBlogs={bookedBlogs} setBookedBlogs={setBookedBlogs}></BookedBookMark>)
             }
             </div>
             

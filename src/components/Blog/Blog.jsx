@@ -11,17 +11,32 @@ const Blog = ({blog, readTimes, setreadTimes, bookedBlogs, setBookedBlogs}) => {
     const {cover, BlogName, userImg, userName, publishDate, readTime, hashTag} = blog;
     
     const markReadTime = (readTime) => {
+        const isExist = readTimes.find(item => item.id === readTime.id);
+        if(isExist){
+            return  toast.error('The read time already exist!', {autoClose:2000});
+        }
+
         const totalRealTime = [...readTimes, readTime];
-        setreadTimes(totalRealTime)
+        setreadTimes(totalRealTime);
+        toast.success("Readt added successful", {
+            autoClose:1000,
+            position: toast.POSITION.BOTTOM_RIGHT
+        })
     }
     
     const addbookMark = (bookMark) => {
+        const isExist = bookedBlogs.find(item => item.id === bookMark.id);
+        if(isExist){
+            return  toast.error('The blog already exist!', {autoClose:2000});
+        }
+
         const totalBookMark = [...bookedBlogs, bookMark];
         setBookedBlogs(totalBookMark)
         toast.success("Selected successful", {
             autoClose:1000,
             position: toast.POSITION.BOTTOM_RIGHT
         })
+        
     }
 
 

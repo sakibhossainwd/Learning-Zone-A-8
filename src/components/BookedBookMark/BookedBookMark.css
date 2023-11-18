@@ -16,4 +16,7 @@
 .trash-icon{
     color: red;
     cursor: pointer;
+    background-color: white;
+    padding: 0%;
+    margin: 0;
 }
