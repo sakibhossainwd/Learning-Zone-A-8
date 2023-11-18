@@ -3,11 +3,12 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 import './Blog.css'
+import { toast } from 'react-toastify';
 
 const Blog = ({blog, readTimes, setreadTimes, bookedBlogs, setBookedBlogs}) => {
     // console.log(props.blog.cover)
     // const blog = props.blog
-    const {id, cover, BlogName, userImg, userName, publishDate, readTime, hashTag} = blog;
+    const {cover, BlogName, userImg, userName, publishDate, readTime, hashTag} = blog;
     
     const markReadTime = (readTime) => {
         const totalRealTime = [...readTimes, readTime];
@@ -17,6 +18,10 @@ const Blog = ({blog, readTimes, setreadTimes, bookedBlogs, setBookedBlogs}) => {
     const addbookMark = (bookMark) => {
         const totalBookMark = [...bookedBlogs, bookMark];
         setBookedBlogs(totalBookMark)
+        toast.success("Selected successful", {
+            autoClose:1000,
+            position: toast.POSITION.BOTTOM_RIGHT
+        })
     }
 
 

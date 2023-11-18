@@ -10,4 +10,10 @@
     padding: 10px;
     border-radius: 5px;
     margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.trash-icon{
+    color: red;
+    cursor: pointer;
 }

@@ -14,7 +14,7 @@ const BlogPage = () => {
     const [bookedBlogs, setBookedBlogs] = useState([])
 
     useEffect ( () => {
-        fetch('../../../fakeData/blogs.json')
+        fetch('blogs.json')
         .then(res => res.json())
         .then(data => setBlogs(data))
     }, [])
